@@ -1,76 +1,87 @@
-# ExpenseTracker - Трекер расходов
+# ExpenseTracker - Expense Tracker
 
-## Описание проекта
-ExpenseTracker — это настольное приложение для отслеживания доходов и расходов, написанное на Python с использованием фреймворка PySide6. Данные хранятся в базе данных SQLite, обеспечивая удобный способ управления финансовыми операциями.
+## Project Description
 
-## Функционал
-- **Добавление, редактирование и удаление транзакций** (доходы и расходы).
-- **Подсчет общего баланса**, а также отдельных категорий расходов (Авто, Продукты, Развлечения, Другое).
-- **Отображение всех транзакций** в удобной таблице с возможностью сортировки.
-- **Использование базы данных SQLite** для хранения данных с автоматическим созданием таблицы, если она отсутствует.
-- **Графический интерфейс**, реализованный на PySide6.
+ExpenseTracker is a desktop application for tracking income and expenses, written in Python using the PySide6 framework. Data is stored in an SQLite database, providing a convenient way to manage financial transactions.
 
-## Технологии
-- **Язык программирования**: Python
-- **Фреймворк GUI**: PySide6
-- **База данных**: SQLite
+## Features
 
-## Установка и запуск
-### 1. Клонирование репозитория
+- ✅ **Add, edit, and delete transactions** (income and expenses).
+- 💰 **Calculate total balance** as well as separate expense categories (🚗 Auto, 🛒 Groceries, 🎉 Entertainment, 🏠 Other).
+- 📊 **Display all transactions** in an easy-to-use table with sorting capabilities.
+- 🗄️ **Use an SQLite database** for data storage with automatic table creation if it does not exist.
+- 🖥️ **Graphical user interface** implemented with PySide6.
+
+## Technologies
+
+- 🐍 **Programming Language**: Python
+- 🖼️ **GUI Framework**: PySide6
+- 🗄️ **Database**: SQLite
+
+## Installation and Launch
+
+### 1. 🔽 Clone the Repository
+
 ```sh
 git clone https://github.com/iDeash123/Expenses.git
 cd Expenses
 ```
 
-### 2. Установка зависимостей
-Перед запуском необходимо установить PySide6:
+### 2. 📦 Install Dependencies
+
+Before running the application, install PySide6:
+
 ```sh
 pip install PySide6
 ```
 
-### 3. Запуск приложения
+### 3. 🚀 Run the Application
+
 ```sh
 python main.py
 ```
 
-## Структура проекта
+## Project Structure
+
 ```
 Expenses/
-│── main.py              # Главный файл запуска приложения
-│── connection.py        # Модуль для работы с базой данных SQLite
-│── new_transaction.py   # Интерфейс для добавления/редактирования транзакций
-│── ui_main.py           # Сгенерированный UI-файл основного окна
-│── expense_db.db        # Файл базы данных (создается автоматически)
-└── README.md            # Описание проекта
+│── main.py              # 🏁 Main application file
+│── connection.py        # 🗄️ Module for working with the SQLite database
+│── new_transaction.py   # ➕ Interface for adding/editing transactions
+│── ui_main.py           # 🎨 Generated UI file for the main window
+│── expense_db.db        # 🛢️ Database file (created automatically)
+└── README.md            # 📖 Project description
 ```
 
-## Основные классы и их функции
+## Main Classes and Their Functions
+
 ### `Data`
-Класс для работы с базой данных SQLite:
-- `create_connection()` – устанавливает соединение с базой данных и создает таблицу при необходимости.
-- `add_new_transaction_query()` – добавляет новую запись о расходе или доходе.
-- `update_transaction_query()` – редактирует существующую запись.
-- `delete_transaction_query()` – удаляет запись и при необходимости сбрасывает автоинкремент ID.
-- Методы подсчета итоговых сумм (`total_balance()`, `total_income()`, `total_outcome()`, и т. д.).
+
+Class for working with the SQLite database:
+
+- 🔌 `create_connection()` – establishes a connection to the database and creates the table if necessary.
+- ➕ `add_new_transaction_query()` – adds a new expense or income record.
+- ✏️ `update_transaction_query()` – edits an existing record.
+- ❌ `delete_transaction_query()` – deletes a record and resets the auto-increment ID if needed.
+- 📊 Methods for calculating total sums (`total_balance()`, `total_income()`, `total_outcome()`, etc.).
 
 ### `ExpenseTracker`
-Главное окно приложения:
-- `view_data()` – отображает транзакции в таблице.
-- `reload_data()` – обновляет показатели баланса.
-- `open_new_transaction_window()` – открывает окно для добавления/редактирования записи.
-- `add_new_transaction()` – добавляет новую транзакцию в БД.
-- `edit_current_transaction()` – редактирует выбранную транзакцию.
-- `delete_current_transaction()` – удаляет транзакцию.
 
-## Возможные улучшения
-- Добавить категории расходов с возможностью редактирования.
-- Реализовать экспорт данных в CSV или Excel.
-- Добавить графики для визуализации расходов и доходов.
+Main application window:
 
-## Автор
-Разработчик: [iDeash123](https://github.com/iDeash123)
+- 📋 `view_data()` – displays transactions in the table.
+- 🔄 `reload_data()` – updates balance indicators.
+- 🆕 `open_new_transaction_window()` – opens a window for adding/editing records.
+- ➕ `add_new_transaction()` – adds a new transaction to the database.
+- ✏️ `edit_current_transaction()` – edits the selected transaction.
+- ❌ `delete_current_transaction()` – deletes a transaction.
 
-Если у вас есть предложения по улучшению проекта или нашли ошибку — создавайте issue или pull request! 🚀
+## Possible Improvements
 
+- 🏷️ Add customizable expense categories.
+- 📤 Implement data export to CSV or Excel.
+- 📈 Include graphs for visualizing expenses and income.
 
-![Screenshot 2023-05-01 203531](https://user-images.githubusercontent.com/26361250/235498237-62d36f89-6f75-4d78-bc83-8dd0ab8b166f.jpg)
+### If you have suggestions for improving the project or found a bug – feel free to create an issue or a pull request! 🚀
+
+###
