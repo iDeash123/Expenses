@@ -3,21 +3,22 @@ from PySide6 import QtWidgets
 from PySide6.QtWidgets import QApplication, QMainWindow, QHeaderView
 from PySide6.QtSql import QSqlTableModel
 from PySide6.QtCore import Qt
+from PySide6.QtGui import QFont, QIcon
 
 from ui_main import Ui_MainWindow
 from new_transaction import Ui_Dialog
 from connection import Data
 
-# Кастомна модель
+
 class NonEditableSqlTableModel(QSqlTableModel):
     def flags(self, index):
         default_flags = super().flags(index)
-        # Забороняємо редагування клітинок
         return default_flags & ~Qt.ItemIsEditable
 
 class ExpenseTracker(QMainWindow):
     def __init__(self):
         super(ExpenseTracker, self).__init__()
+        self.setWindowIcon(QIcon("icons/main.png"))
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.conn = Data()
@@ -43,15 +44,19 @@ class ExpenseTracker(QMainWindow):
         self.model.select()
         self.ui.tableView.setModel(self.model)
 
-        # Налаштування заголовків таблиці для адаптації до розміру вікна
+        font = QFont("Sansation", 10)  
+        self.ui.tableView.setFont(font)
+
+
         header = self.ui.tableView.horizontalHeader()
         header.setSectionResizeMode(QHeaderView.Stretch)  
 
-        header.setStretchLastSection(True)  # Останній стовпець заповнює доступний простір
+        header.setStretchLastSection(True)
 
     def open_new_transaction_window(self):
         self.new_window = QtWidgets.QDialog()
         self.ui_window = Ui_Dialog()
+        self.new_window.setWindowIcon(QIcon("icons/main.png"))
         self.ui_window.setupUi(self.new_window)
         self.new_window.show()
         sender = self.sender()

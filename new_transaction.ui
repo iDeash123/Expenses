@@ -76,7 +76,7 @@ background-color: none;
 border: none;</string>
         </property>
         <property name="text">
-         <string>New➕ &amp; ✏️Edit transaction</string>
+         <string>New &amp; Edit transaction</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -108,31 +108,31 @@ QComboBox:item {
          <number>-1</number>
         </property>
         <property name="placeholderText">
-         <string>📍 Choose category</string>
+         <string> Choose category</string>
         </property>
         <item>
          <property name="text">
-          <string>⚒️ Work</string>
+          <string>Work</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>🚗 Auto</string>
+          <string>Auto</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>🧩 Other</string>
+          <string>Other</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>🛒 Grocery</string>
+          <string>Grocery</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>🎮 Entertainment</string>
+          <string>Entertainment</string>
          </property>
         </item>
        </widget>
@@ -153,7 +153,7 @@ font: 16pt &quot;Sansation&quot;;</string>
         </property>
         <property name="dateTime">
          <datetime>
-          <hour>14</hour>
+          <hour>10</hour>
           <minute>0</minute>
           <second>0</second>
           <year>2024</year>
@@ -227,16 +227,16 @@ QComboBox QAbstractItemView {
 </string>
         </property>
         <property name="placeholderText">
-         <string>📍 Choose status</string>
+         <string>Choose status</string>
         </property>
         <item>
          <property name="text">
-          <string>⬇️ Income</string>
+          <string>Income</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>⬆️ Outcome</string>
+          <string>Outcome</string>
          </property>
         </item>
        </widget>
@@ -275,7 +275,7 @@ background-color:rgba(255,255,255,70);
 }</string>
         </property>
         <property name="text">
-         <string>💾 Save  transaction</string>
+         <string>Save  transaction</string>
         </property>
         <property name="iconSize">
          <size>
@@ -293,6 +293,8 @@ background-color:rgba(255,255,255,70);
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="res-rs.qrc"/>
+ </resources>
  <connections/>
 </ui>

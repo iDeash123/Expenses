@@ -12,18 +12,23 @@ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
 from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
+    QFont, QFontDatabase, QGradient, 
     QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
+    QPalette, QPixmap, QRadialGradient, QTransform, )
 from PySide6.QtWidgets import (QAbstractSpinBox, QApplication, QComboBox, QDateEdit,
     QDialog, QFrame, QLabel, QLineEdit,
-    QPushButton, QSizePolicy, QVBoxLayout, QWidget)
+    QPushButton, QSizePolicy, QVBoxLayout, QWidget,)
+    
+import res
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
-            Dialog.setObjectName(u"Dialog")
+            Dialog.setObjectName(u"New & Edit transaction")
         Dialog.resize(421, 329)
+        Dialog.setMinimumSize(QSize(421, 329))
+        Dialog.setMaximumSize(QSize(421, 329))
+       
         font = QFont()
         font.setFamilies([u"Noto Sans SC"])
         Dialog.setFont(font)
@@ -100,7 +105,7 @@ class Ui_Dialog(object):
 "font: 16pt \"Sansation\";")
         self.dateEdit.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.dateEdit.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.NoButtons)
-        self.dateEdit.setDateTime(QDateTime(QDate(2024, 1, 1), QTime(14, 0, 0)))
+        self.dateEdit.setDateTime(QDateTime(QDate(2024, 1, 1), QTime(10, 0, 0)))
         self.dateEdit.setCurrentSectionIndex(0)
         self.dateEdit.setDate(QDate(2024, 1, 1))
 
@@ -192,21 +197,21 @@ class Ui_Dialog(object):
     # setupUi
 
     def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Dialog", None))
-        self.lbl_new_transaction.setText(QCoreApplication.translate("Dialog", u"New\u2795 & \u270f\ufe0fEdit transaction", None))
-        self.cb_choose_category.setItemText(0, QCoreApplication.translate("Dialog", u"\u2692\ufe0f Work", None))
-        self.cb_choose_category.setItemText(1, QCoreApplication.translate("Dialog", u"\ud83d\ude97 Auto", None))
-        self.cb_choose_category.setItemText(2, QCoreApplication.translate("Dialog", u"\ud83e\udde9 Other", None))
-        self.cb_choose_category.setItemText(3, QCoreApplication.translate("Dialog", u"\ud83d\uded2 Grocery", None))
-        self.cb_choose_category.setItemText(4, QCoreApplication.translate("Dialog", u"\ud83c\udfae Entertainment", None))
+        Dialog.setWindowTitle(QCoreApplication.translate("➕New & ✏️Edit transaction", u"New & Edit transaction", None))
+        self.lbl_new_transaction.setText(QCoreApplication.translate("Dialog", u"➕New & ✏️Edit transaction", None))
+        self.cb_choose_category.setItemText(0, QCoreApplication.translate("Dialog", u"Work", None))
+        self.cb_choose_category.setItemText(1, QCoreApplication.translate("Dialog", u"Auto", None))
+        self.cb_choose_category.setItemText(2, QCoreApplication.translate("Dialog", u"Other", None))
+        self.cb_choose_category.setItemText(3, QCoreApplication.translate("Dialog", u"Grocery", None))
+        self.cb_choose_category.setItemText(4, QCoreApplication.translate("Dialog", u"Entertainment", None))
 
-        self.cb_choose_category.setPlaceholderText(QCoreApplication.translate("Dialog", u"\ud83d\udccd Choose category", None))
-        self.le_description.setPlaceholderText(QCoreApplication.translate("Dialog", u"Description", None))
-        self.le_balance.setPlaceholderText(QCoreApplication.translate("Dialog", u"Balance", None))
-        self.cb_status.setItemText(0, QCoreApplication.translate("Dialog", u"\u2b07\ufe0f Income", None))
-        self.cb_status.setItemText(1, QCoreApplication.translate("Dialog", u"\u2b06\ufe0f Outcome", None))
+        self.cb_choose_category.setPlaceholderText(QCoreApplication.translate("Dialog", u"📍Choose category", None))
+        self.le_description.setPlaceholderText(QCoreApplication.translate("Dialog", u"📦Description", None))
+        self.le_balance.setPlaceholderText(QCoreApplication.translate("Dialog", u"💰Balance", None))
+        self.cb_status.setItemText(0, QCoreApplication.translate("Dialog", u"⬇️Income", None))
+        self.cb_status.setItemText(1, QCoreApplication.translate("Dialog", u"⬆️Outcome", None))
 
-        self.cb_status.setPlaceholderText(QCoreApplication.translate("Dialog", u"\ud83d\udccd Choose status", None))
-        self.btn_new_transaction.setText(QCoreApplication.translate("Dialog", u"\ud83d\udcbe Save  transaction", None))
+        self.cb_status.setPlaceholderText(QCoreApplication.translate("Dialog", u"📍Choose status", None))
+        self.btn_new_transaction.setText(QCoreApplication.translate("Dialog", u"💾Save  transaction", None))
     # retranslateUi
 

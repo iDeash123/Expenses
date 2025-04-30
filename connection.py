@@ -44,6 +44,7 @@ class Data:
         sql_query = "DELETE FROM expenses WHERE ID=?"
         self.execute_query_with_params(sql_query, [id])
         
+ 
         query = self.execute_query_with_params("SELECT COUNT(*) FROM expenses")
         query.next()
         count = query.value(0)

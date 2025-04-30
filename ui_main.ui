@@ -87,7 +87,7 @@ border: none;
 font: 700 30pt &quot;Sansation&quot;;</string>
            </property>
            <property name="text">
-            <string>💵Current Balance</string>
+            <string>Current Balance</string>
            </property>
           </widget>
          </item>
@@ -137,7 +137,7 @@ padding-top: 10px;
 font: 700 21pt &quot;Sansation&quot;;</string>
              </property>
              <property name="text">
-              <string>⬇️Income</string>
+              <string>Income</string>
              </property>
             </widget>
            </item>
@@ -189,7 +189,7 @@ border: none;
 padding-top: 10px;</string>
              </property>
              <property name="text">
-              <string>⬆️Outcome</string>
+              <string>Outcome</string>
              </property>
             </widget>
            </item>
@@ -270,7 +270,7 @@ border: none;
 font: 700 30pt &quot;Sansation&quot;;</string>
            </property>
            <property name="text">
-            <string>🗂Expenses categories</string>
+            <string>Expenses categories</string>
            </property>
           </widget>
          </item>
@@ -294,7 +294,7 @@ background-color: none;
 border: none;</string>
              </property>
              <property name="text">
-              <string>🛒Groceries</string>
+              <string>Groceries</string>
              </property>
             </widget>
            </item>
@@ -345,7 +345,7 @@ background-color: none;
 border: none;</string>
              </property>
              <property name="text">
-              <string>🎮Entertainment</string>
+              <string>Entertainment</string>
              </property>
             </widget>
            </item>
@@ -396,7 +396,7 @@ background-color: none;
 border: none;</string>
              </property>
              <property name="text">
-              <string>🚗Auto</string>
+              <string>Auto</string>
              </property>
             </widget>
            </item>
@@ -447,7 +447,7 @@ background-color: none;
 border: none;</string>
              </property>
              <property name="text">
-              <string>🧩Other</string>
+              <string>Other</string>
              </property>
             </widget>
            </item>
@@ -541,12 +541,16 @@ background-color:rgba(255,255,255,70);
 }</string>
          </property>
          <property name="text">
-          <string>➕New transaction</string>
+          <string>New transaction</string>
+         </property>
+         <property name="icon">
+          <iconset resource="res-rs.qrc">
+           <normaloff>:/icons/icons/post_add_white_24dp.svg</normaloff>:/icons/icons/post_add_white_24dp.svg</iconset>
          </property>
          <property name="iconSize">
           <size>
-           <width>24</width>
-           <height>24</height>
+           <width>32</width>
+           <height>32</height>
           </size>
          </property>
         </widget>
@@ -585,12 +589,16 @@ background-color:rgba(255,255,255,70);
 }</string>
          </property>
          <property name="text">
-          <string>🗑️Delete transaction</string>
+          <string>Delete transaction</string>
+         </property>
+         <property name="icon">
+          <iconset resource="res-rs.qrc">
+           <normaloff>:/icons/icons/delete_white_24dp.svg</normaloff>:/icons/icons/delete_white_24dp.svg</iconset>
          </property>
          <property name="iconSize">
           <size>
-           <width>24</width>
-           <height>24</height>
+           <width>32</width>
+           <height>32</height>
           </size>
          </property>
         </widget>
@@ -629,12 +637,16 @@ background-color:rgba(255,255,255,70);
 }</string>
          </property>
          <property name="text">
-          <string>✏️Edit transaction</string>
+          <string>Edit transaction</string>
+         </property>
+         <property name="icon">
+          <iconset resource="res-rs.qrc">
+           <normaloff>:/icons/icons/edit_white_24dp.svg</normaloff>:/icons/icons/edit_white_24dp.svg</iconset>
          </property>
          <property name="iconSize">
           <size>
-           <width>24</width>
-           <height>24</height>
+           <width>32</width>
+           <height>32</height>
           </size>
          </property>
         </widget>
@@ -703,6 +715,8 @@ QTableView::item:selected{
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="res-rs.qrc"/>
+ </resources>
  <connections/>
 </ui>

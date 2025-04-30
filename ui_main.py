@@ -18,13 +18,14 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QHeaderView,
     QLabel, QMainWindow, QPushButton, QSizePolicy,
     QTableView, QVBoxLayout, QWidget)
+import res
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(1006, 675)
-        MainWindow.setMinimumSize(QSize(800, 600))
+        MainWindow.setMinimumSize(QSize(1006, 675))
         font = QFont()
         font.setFamilies([u"Noto Sans SC"])
         MainWindow.setFont(font)
@@ -338,7 +339,10 @@ class Ui_MainWindow(object):
 "QPushButton:pressed{\n"
 "background-color:rgba(255,255,255,70);\n"
 "}")
-        self.btn_new_transaction.setIconSize(QSize(24, 24))
+        icon = QIcon()
+        icon.addFile(u":/icons/icons/post_add_white_24dp.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.btn_new_transaction.setIcon(icon)
+        self.btn_new_transaction.setIconSize(QSize(32, 32))
 
         self.horizontalLayout.addWidget(self.btn_new_transaction)
 
@@ -361,7 +365,10 @@ class Ui_MainWindow(object):
 "QPushButton:pressed{\n"
 "background-color:rgba(255,255,255,70);\n"
 "}")
-        self.btn_delete_transaction.setIconSize(QSize(24, 24))
+        icon1 = QIcon()
+        icon1.addFile(u":/icons/icons/delete_white_24dp.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.btn_delete_transaction.setIcon(icon1)
+        self.btn_delete_transaction.setIconSize(QSize(32, 32))
 
         self.horizontalLayout.addWidget(self.btn_delete_transaction)
 
@@ -384,7 +391,10 @@ class Ui_MainWindow(object):
 "QPushButton:pressed{\n"
 "background-color:rgba(255,255,255,70);\n"
 "}")
-        self.btn_edit_transaction.setIconSize(QSize(24, 24))
+        icon2 = QIcon()
+        icon2.addFile(u":/icons/icons/edit_white_24dp.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.btn_edit_transaction.setIcon(icon2)
+        self.btn_edit_transaction.setIconSize(QSize(32, 32))
 
         self.horizontalLayout.addWidget(self.btn_edit_transaction)
 
@@ -442,24 +452,24 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.lbl_current_balance.setText(QCoreApplication.translate("MainWindow", u"\ud83d\udcb5Current Balance", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Expense Tracker", None))
+        self.lbl_current_balance.setText(QCoreApplication.translate("MainWindow", u"💵Current Balance", None))
         self.current_balance.setText(QCoreApplication.translate("MainWindow", u"$3235,50", None))
-        self.lbl_income.setText(QCoreApplication.translate("MainWindow", u"\u2b07\ufe0fIncome", None))
+        self.lbl_income.setText(QCoreApplication.translate("MainWindow", u"⬇️Income", None))
         self.income_balance.setText(QCoreApplication.translate("MainWindow", u"$3235,50", None))
-        self.lbl_outcome.setText(QCoreApplication.translate("MainWindow", u"\u2b06\ufe0fOutcome", None))
+        self.lbl_outcome.setText(QCoreApplication.translate("MainWindow", u"⬆️Outcome", None))
         self.outcome_balance.setText(QCoreApplication.translate("MainWindow", u"$3235,50", None))
-        self.lbl_expenses_categories.setText(QCoreApplication.translate("MainWindow", u"\ud83d\uddc2Expenses categories", None))
-        self.lbl_groceries.setText(QCoreApplication.translate("MainWindow", u"\ud83d\uded2Groceries", None))
+        self.lbl_expenses_categories.setText(QCoreApplication.translate("MainWindow", u"🗂Expenses categories", None))
+        self.lbl_groceries.setText(QCoreApplication.translate("MainWindow", u"🛒Groceries", None))
         self.total_groceries.setText(QCoreApplication.translate("MainWindow", u"$3235,50", None))
-        self.lbl_entertainment.setText(QCoreApplication.translate("MainWindow", u"\ud83c\udfaeEntertainment", None))
+        self.lbl_entertainment.setText(QCoreApplication.translate("MainWindow", u"🎮Entertainment", None))
         self.total_entertainment.setText(QCoreApplication.translate("MainWindow", u"$3235,50", None))
-        self.lbl_auto.setText(QCoreApplication.translate("MainWindow", u"\ud83d\ude97Auto", None))
+        self.lbl_auto.setText(QCoreApplication.translate("MainWindow", u"🚗Auto", None))
         self.total_auto.setText(QCoreApplication.translate("MainWindow", u"$3235,50", None))
-        self.lbl_other.setText(QCoreApplication.translate("MainWindow", u"\ud83e\udde9Other", None))
+        self.lbl_other.setText(QCoreApplication.translate("MainWindow", u"🧩Other", None))
         self.total_other.setText(QCoreApplication.translate("MainWindow", u"$3235,50", None))
-        self.btn_new_transaction.setText(QCoreApplication.translate("MainWindow", u"\u2795New transaction", None))
-        self.btn_delete_transaction.setText(QCoreApplication.translate("MainWindow", u"\ud83d\uddd1\ufe0fDelete transaction", None))
-        self.btn_edit_transaction.setText(QCoreApplication.translate("MainWindow", u"\u270f\ufe0fEdit transaction", None))
+        self.btn_new_transaction.setText(QCoreApplication.translate("MainWindow", u"New transaction", None))
+        self.btn_delete_transaction.setText(QCoreApplication.translate("MainWindow", u"Delete transaction", None))
+        self.btn_edit_transaction.setText(QCoreApplication.translate("MainWindow", u"Edit transaction", None))
     # retranslateUi
 

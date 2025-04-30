@@ -2,15 +2,22 @@ import sys
 from PySide6 import QtWidgets
 from PySide6.QtWidgets import QApplication, QMainWindow, QHeaderView
 from PySide6.QtSql import QSqlTableModel
+from PySide6.QtGui import QFont, QIcon
+from PySide6.QtCore import Qt
+
 
 from ui_main import Ui_MainWindow
 from new_transaction import Ui_Dialog
 from connection import Data
 
 
+    
+
 class ExpenseTracker(QMainWindow):
+
     def __init__(self):
         super(ExpenseTracker, self).__init__()
+        self.setWindowIcon(QIcon("icons/main.png"))
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.conn = Data()
@@ -36,6 +43,10 @@ class ExpenseTracker(QMainWindow):
         self.model.select()
         self.ui.tableView.setModel(self.model)
 
+
+        font = QFont("Sansation", 10)  
+        self.ui.tableView.setFont(font)
+
         
         header = self.ui.tableView.horizontalHeader()
         header.setSectionResizeMode(QHeaderView.Stretch) 
@@ -45,6 +56,7 @@ class ExpenseTracker(QMainWindow):
 
     def open_new_transaction_window(self):
         self.new_window = QtWidgets.QDialog()
+        self.new_window.setWindowIcon(QIcon("icons/main.png"))
         self.ui_window = Ui_Dialog()
         self.ui_window.setupUi(self.new_window)
         self.new_window.show()
