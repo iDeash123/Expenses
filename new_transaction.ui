@@ -6,16 +6,26 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>300</width>
-    <height>331</height>
+    <width>421</width>
+    <height>329</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Noto Sans SC</family>
+   </font>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
    <string notr="true">font-family: Noto Sans SC;
-background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135, 255), stop:0.427447 rgba(41, 61, 132, 235), stop:1 rgba(155, 79, 165, 255));</string>
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0,
+    stop:0 rgba(10, 10, 40, 255),
+    stop:0.3 rgba(30, 0, 60, 255),
+    stop:0.6 rgba(0, 70, 100, 255),
+    stop:1 rgba(0, 150, 160, 255));
+</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -26,14 +36,14 @@ border: 1px solid rgba(255,255,255,40);
 border-radius: 7px;</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
+      <enum>QFrame::Shape::NoFrame</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Shadow::Raised</enum>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_21">
       <property name="spacing">
-       <number>-1</number>
+       <number>6</number>
       </property>
       <property name="leftMargin">
        <number>12</number>
@@ -51,8 +61,9 @@ border-radius: 7px;</string>
        <widget class="QLabel" name="lbl_new_transaction">
         <property name="font">
          <font>
-          <family>Noto Sans SC</family>
-          <pointsize>20</pointsize>
+          <family>Sansation</family>
+          <pointsize>22</pointsize>
+          <italic>false</italic>
           <bold>true</bold>
          </font>
         </property>
@@ -60,14 +71,15 @@ border-radius: 7px;</string>
          <string notr="true">color: white;
 font-weight: bold;
 font-size: 20pt;
+font: 700 22pt &quot;Sansation&quot;;
 background-color: none;
 border: none;</string>
         </property>
         <property name="text">
-         <string>New transaction</string>
+         <string>New➕ &amp; ✏️Edit transaction</string>
         </property>
         <property name="alignment">
-         <set>Qt::AlignCenter</set>
+         <set>Qt::AlignmentFlag::AlignCenter</set>
         </property>
        </widget>
       </item>
@@ -75,43 +87,52 @@ border: none;</string>
        <widget class="QComboBox" name="cb_choose_category">
         <property name="styleSheet">
          <string notr="true">QComboBox {
-font-size: 16pt;
-color: white;
+    font-size: 16pt;
+    color: white;
+	font: 17pt &quot;Sansation&quot;;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #2c2c2c; /* темно-сірий фон списку */
+    color: white; /* колір тексту в списку */
+    selection-background-color: #444444; /* фон вибраного пункту */
+    selection-color: white;
 }
 
 QComboBox:item {
-    color: black;
-}</string>
+    color: white; /* колір пунктів списку */
+}
+</string>
         </property>
         <property name="currentIndex">
          <number>-1</number>
         </property>
         <property name="placeholderText">
-         <string>Choose category</string>
+         <string>📍 Choose category</string>
         </property>
         <item>
          <property name="text">
-          <string>Work</string>
+          <string>⚒️ Work</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Auto</string>
+          <string>🚗 Auto</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Other</string>
+          <string>🧩 Other</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Grocery</string>
+          <string>🛒 Grocery</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Entertainment</string>
+          <string>🎮 Entertainment</string>
          </property>
         </item>
        </widget>
@@ -121,26 +142,34 @@ QComboBox:item {
         <property name="styleSheet">
          <string notr="true">font-size: 16pt;
 color: white;
-padding-left: 10px;</string>
+padding-left: 10px;
+font: 16pt &quot;Sansation&quot;;</string>
         </property>
         <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
         </property>
         <property name="buttonSymbols">
-         <enum>QAbstractSpinBox::NoButtons</enum>
+         <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
         </property>
         <property name="dateTime">
          <datetime>
-          <hour>22</hour>
+          <hour>14</hour>
           <minute>0</minute>
           <second>0</second>
-          <year>2022</year>
-          <month>12</month>
-          <day>31</day>
+          <year>2024</year>
+          <month>1</month>
+          <day>1</day>
          </datetime>
         </property>
         <property name="currentSectionIndex">
          <number>0</number>
+        </property>
+        <property name="date">
+         <date>
+          <year>2024</year>
+          <month>1</month>
+          <day>1</day>
+         </date>
         </property>
        </widget>
       </item>
@@ -149,10 +178,11 @@ padding-left: 10px;</string>
         <property name="styleSheet">
          <string notr="true">font-size: 16pt;
 color: white;
-padding-left: 10px;</string>
+padding-left: 10px;
+	font: 17pt &quot;Sansation&quot;;</string>
         </property>
         <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
         </property>
         <property name="placeholderText">
          <string>Description</string>
@@ -164,10 +194,11 @@ padding-left: 10px;</string>
         <property name="styleSheet">
          <string notr="true">font-size: 16pt;
 color: white;
-padding-left: 10px;</string>
+padding-left: 10px;
+	font: 17pt &quot;Sansation&quot;;</string>
         </property>
         <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
         </property>
         <property name="placeholderText">
          <string>Balance</string>
@@ -180,23 +211,32 @@ padding-left: 10px;</string>
          <string notr="true">QComboBox {
 font-size: 16pt;
 color: white;
+font: 17pt &quot;Sansation&quot;;
 }
 
 QComboBox:item {
     color: black;
-}</string>
+}
+QComboBox QAbstractItemView {
+    background-color: #2c2c2c; /* темно-сірий фон списку */
+    color: white; /* колір тексту в списку */
+    selection-background-color: #444444; /* фон вибраного пункту */
+    selection-color: white;
+}
+
+</string>
         </property>
         <property name="placeholderText">
-         <string>Choose status</string>
+         <string>📍 Choose status</string>
         </property>
         <item>
          <property name="text">
-          <string>Income</string>
+          <string>⬇️ Income</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Outcome</string>
+          <string>⬆️ Outcome</string>
          </property>
         </item>
        </widget>
@@ -211,7 +251,9 @@ QComboBox:item {
         </property>
         <property name="font">
          <font>
-          <family>Noto Sans SC</family>
+          <family>Sansation</family>
+          <pointsize>20</pointsize>
+          <italic>false</italic>
           <bold>true</bold>
          </font>
         </property>
@@ -223,6 +265,7 @@ QComboBox:item {
      border-radius:7px;
 width: 230;
 height: 50;
+	font: 700 20pt &quot;Sansation&quot;;
 }
 QPushButton:hover{
 background-color:rgba(255,255,255,30);
@@ -232,17 +275,16 @@ background-color:rgba(255,255,255,70);
 }</string>
         </property>
         <property name="text">
-         <string>Save new transaction</string>
-        </property>
-        <property name="icon">
-         <iconset resource="res-rs.qrc">
-          <normaloff>:/icons/icons/post_add_white_24dp.svg</normaloff>:/icons/icons/post_add_white_24dp.svg</iconset>
+         <string>💾 Save  transaction</string>
         </property>
         <property name="iconSize">
          <size>
-          <width>24</width>
-          <height>24</height>
+          <width>32</width>
+          <height>32</height>
          </size>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
         </property>
        </widget>
       </item>
@@ -251,9 +293,6 @@ background-color:rgba(255,255,255,70);
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="res-rs.qrc"/>
-  <include location="res-rs.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

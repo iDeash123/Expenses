@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>803</width>
-    <height>673</height>
+    <width>1006</width>
+    <height>675</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -26,7 +26,14 @@
   </property>
   <property name="styleSheet">
    <string notr="true">font-family: Noto Sans SC;
-background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135, 255), stop:0.427447 rgba(41, 61, 132, 235), stop:1 rgba(155, 79, 165, 255));
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0,
+    stop:0 rgba(10, 10, 40, 255),
+    stop:0.3 rgba(30, 0, 60, 255),
+    stop:0.6 rgba(0, 70, 100, 255),
+    stop:1 rgba(0, 150, 160, 255));
+
+
+
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -41,10 +48,10 @@ border: 1px solid rgba(255,255,255,40);
 border-radius: 7px;</string>
         </property>
         <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
+         <enum>QFrame::Shape::NoFrame</enum>
         </property>
         <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
+         <enum>QFrame::Shadow::Raised</enum>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_21">
          <property name="spacing">
@@ -66,20 +73,21 @@ border-radius: 7px;</string>
           <widget class="QLabel" name="lbl_current_balance">
            <property name="font">
             <font>
-             <family>Noto Sans SC</family>
-             <pointsize>20</pointsize>
+             <family>Sansation</family>
+             <pointsize>30</pointsize>
+             <italic>false</italic>
              <bold>true</bold>
             </font>
            </property>
            <property name="styleSheet">
             <string notr="true">color: white;
 font-weight: bold;
-font-size: 20pt;
 background-color: none;
-border: none;</string>
+border: none;
+font: 700 30pt &quot;Sansation&quot;;</string>
            </property>
            <property name="text">
-            <string>Current Balance</string>
+            <string>💵Current Balance</string>
            </property>
           </widget>
          </item>
@@ -87,16 +95,16 @@ border: none;</string>
           <widget class="QLabel" name="current_balance">
            <property name="font">
             <font>
-             <family>Noto Sans SC</family>
+             <family>Sansation</family>
              <pointsize>30</pointsize>
              <italic>false</italic>
-             <bold>false</bold>
+             <bold>true</bold>
              <kerning>true</kerning>
             </font>
            </property>
            <property name="styleSheet">
             <string notr="true">color: white;
-font-size: 30pt;
+font: 700 30pt &quot;Sansation&quot;;
 background-color: none;
 border: none;</string>
            </property>
@@ -111,55 +119,25 @@ border: none;</string>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_9">
            <item>
-            <widget class="QLabel" name="lbl_arrow_top">
-             <property name="maximumSize">
-              <size>
-               <width>24</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Noto Sans SC</family>
-               <pointsize>16</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: white;
-font-weight: bold;
-font-size: 16pt;
-background-color: none;
-border: none;
-padding-top: 10px;</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="pixmap">
-              <pixmap resource="res-rs.qrc">:/icons/icons/north_west_white_24dp.svg</pixmap>
-             </property>
-            </widget>
-           </item>
-           <item>
             <widget class="QLabel" name="lbl_income">
              <property name="font">
               <font>
-               <family>Noto Sans SC</family>
-               <pointsize>16</pointsize>
+               <family>Sansation</family>
+               <pointsize>21</pointsize>
+               <italic>false</italic>
                <bold>true</bold>
               </font>
              </property>
              <property name="styleSheet">
               <string notr="true">color: white;
 font-weight: bold;
-font-size: 16pt;
 background-color: none;
 border: none;
-padding-top: 10px;</string>
+padding-top: 10px;
+font: 700 21pt &quot;Sansation&quot;;</string>
              </property>
              <property name="text">
-              <string>Income</string>
+              <string>⬇️Income</string>
              </property>
             </widget>
            </item>
@@ -169,16 +147,16 @@ padding-top: 10px;</string>
           <widget class="QLabel" name="income_balance">
            <property name="font">
             <font>
-             <family>Noto Sans SC</family>
-             <pointsize>20</pointsize>
+             <family>Sansation</family>
+             <pointsize>22</pointsize>
              <italic>false</italic>
-             <bold>false</bold>
+             <bold>true</bold>
              <kerning>true</kerning>
             </font>
            </property>
            <property name="styleSheet">
             <string notr="true">color: white;
-font-size: 20pt;
+font: 700 22pt &quot;Sansation&quot;;
 background-color: none;
 border: none;</string>
            </property>
@@ -193,55 +171,25 @@ border: none;</string>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_10">
            <item>
-            <widget class="QLabel" name="lbl_arrow_bottom">
-             <property name="maximumSize">
-              <size>
-               <width>24</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Noto Sans SC</family>
-               <pointsize>16</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: white;
-font-weight: bold;
-font-size: 16pt;
-background-color: none;
-border: none;
-padding-top: 10px;</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="pixmap">
-              <pixmap resource="res-rs.qrc">:/icons/icons/call_received_white_24dp.svg</pixmap>
-             </property>
-            </widget>
-           </item>
-           <item>
             <widget class="QLabel" name="lbl_outcome">
              <property name="font">
               <font>
-               <family>Noto Sans SC</family>
-               <pointsize>16</pointsize>
+               <family>Sansation</family>
+               <pointsize>21</pointsize>
+               <italic>false</italic>
                <bold>true</bold>
               </font>
              </property>
              <property name="styleSheet">
               <string notr="true">color: white;
 font-weight: bold;
-font-size: 16pt;
+font: 700 21pt &quot;Sansation&quot;;
 background-color: none;
 border: none;
 padding-top: 10px;</string>
              </property>
              <property name="text">
-              <string>Outcome</string>
+              <string>⬆️Outcome</string>
              </property>
             </widget>
            </item>
@@ -251,16 +199,16 @@ padding-top: 10px;</string>
           <widget class="QLabel" name="outcome_balance">
            <property name="font">
             <font>
-             <family>Noto Sans SC</family>
+             <family>Sansation</family>
              <pointsize>20</pointsize>
              <italic>false</italic>
-             <bold>false</bold>
+             <bold>true</bold>
              <kerning>true</kerning>
             </font>
            </property>
            <property name="styleSheet">
             <string notr="true">color: white;
-font-size: 20pt;
+font: 700 20pt &quot;Sansation&quot;;
 background-color: none;
 border: none;</string>
            </property>
@@ -283,10 +231,10 @@ border: 1px solid rgba(255,255,255,40);
 border-radius: 7px;</string>
         </property>
         <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
+         <enum>QFrame::Shape::NoFrame</enum>
         </property>
         <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
+         <enum>QFrame::Shadow::Raised</enum>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_20">
          <property name="spacing">
@@ -308,79 +256,45 @@ border-radius: 7px;</string>
           <widget class="QLabel" name="lbl_expenses_categories">
            <property name="font">
             <font>
-             <family>Noto Sans SC</family>
-             <pointsize>20</pointsize>
+             <family>Sansation</family>
+             <pointsize>30</pointsize>
+             <italic>false</italic>
              <bold>true</bold>
             </font>
            </property>
            <property name="styleSheet">
             <string notr="true">color: white;
 font-weight: bold;
-font-size: 20pt;
 background-color: none;
-border: none;</string>
+border: none;
+font: 700 30pt &quot;Sansation&quot;;</string>
            </property>
            <property name="text">
-            <string>Expenses categories</string>
+            <string>🗂Expenses categories</string>
            </property>
           </widget>
          </item>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_3">
            <item>
-            <widget class="QLabel" name="icon_groceries">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>24</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Noto Sans SC</family>
-               <pointsize>14</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: white;
-font-weight: bold;
-font-size: 14pt;
-background-color: none;
-border: none;</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="pixmap">
-              <pixmap resource="res-rs.qrc">:/icons/icons/local_grocery_store_white_24dp.svg</pixmap>
-             </property>
-            </widget>
-           </item>
-           <item>
             <widget class="QLabel" name="lbl_groceries">
              <property name="font">
               <font>
-               <family>Noto Sans SC</family>
-               <pointsize>14</pointsize>
+               <family>Sansation</family>
+               <pointsize>21</pointsize>
+               <italic>false</italic>
                <bold>true</bold>
               </font>
              </property>
              <property name="styleSheet">
               <string notr="true">color: white;
 font-weight: bold;
-font-size: 14pt;
+font: 700 21pt &quot;Sansation&quot;;
 background-color: none;
 border: none;</string>
              </property>
              <property name="text">
-              <string>Groceries</string>
+              <string>🛒Groceries</string>
              </property>
             </widget>
            </item>
@@ -388,16 +302,16 @@ border: none;</string>
             <widget class="QLabel" name="total_groceries">
              <property name="font">
               <font>
-               <family>Noto Sans SC</family>
+               <family>Sansation</family>
                <pointsize>16</pointsize>
                <italic>false</italic>
-               <bold>false</bold>
+               <bold>true</bold>
                <kerning>true</kerning>
               </font>
              </property>
              <property name="styleSheet">
               <string notr="true">color: white;
-font-size: 16pt;
+font: 700 16pt &quot;Sansation&quot;;
 background-color: none;
 border: none;</string>
              </property>
@@ -414,53 +328,24 @@ border: none;</string>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_4">
            <item>
-            <widget class="QLabel" name="icon_entertainment">
-             <property name="maximumSize">
-              <size>
-               <width>24</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Noto Sans SC</family>
-               <pointsize>14</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: white;
-font-weight: bold;
-font-size: 14pt;
-background-color: none;
-border: none;</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="pixmap">
-              <pixmap resource="res-rs.qrc">:/icons/icons/sports_esports_white_24dp.svg</pixmap>
-             </property>
-            </widget>
-           </item>
-           <item>
             <widget class="QLabel" name="lbl_entertainment">
              <property name="font">
               <font>
-               <family>Noto Sans SC</family>
-               <pointsize>14</pointsize>
+               <family>Sansation</family>
+               <pointsize>21</pointsize>
+               <italic>false</italic>
                <bold>true</bold>
               </font>
              </property>
              <property name="styleSheet">
               <string notr="true">color: white;
 font-weight: bold;
-font-size: 14pt;
+font: 700 21pt &quot;Sansation&quot;;
 background-color: none;
 border: none;</string>
              </property>
              <property name="text">
-              <string>Entertainment</string>
+              <string>🎮Entertainment</string>
              </property>
             </widget>
            </item>
@@ -468,16 +353,16 @@ border: none;</string>
             <widget class="QLabel" name="total_entertainment">
              <property name="font">
               <font>
-               <family>Noto Sans SC</family>
+               <family>Sansation</family>
                <pointsize>16</pointsize>
                <italic>false</italic>
-               <bold>false</bold>
+               <bold>true</bold>
                <kerning>true</kerning>
               </font>
              </property>
              <property name="styleSheet">
               <string notr="true">color: white;
-font-size: 16pt;
+font: 700 16pt &quot;Sansation&quot;;
 background-color: none;
 border: none;</string>
              </property>
@@ -494,53 +379,24 @@ border: none;</string>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_5">
            <item>
-            <widget class="QLabel" name="icon_auto">
-             <property name="maximumSize">
-              <size>
-               <width>24</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Noto Sans SC</family>
-               <pointsize>14</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: white;
-font-weight: bold;
-font-size: 14pt;
-background-color: none;
-border: none;</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="pixmap">
-              <pixmap resource="res-rs.qrc">:/icons/icons/directions_car_white_24dp.svg</pixmap>
-             </property>
-            </widget>
-           </item>
-           <item>
             <widget class="QLabel" name="lbl_auto">
              <property name="font">
               <font>
-               <family>Noto Sans SC</family>
-               <pointsize>14</pointsize>
+               <family>Sansation</family>
+               <pointsize>21</pointsize>
+               <italic>false</italic>
                <bold>true</bold>
               </font>
              </property>
              <property name="styleSheet">
               <string notr="true">color: white;
 font-weight: bold;
-font-size: 14pt;
+font: 700 21pt &quot;Sansation&quot;;
 background-color: none;
 border: none;</string>
              </property>
              <property name="text">
-              <string>Auto</string>
+              <string>🚗Auto</string>
              </property>
             </widget>
            </item>
@@ -548,16 +404,16 @@ border: none;</string>
             <widget class="QLabel" name="total_auto">
              <property name="font">
               <font>
-               <family>Noto Sans SC</family>
+               <family>Sansation</family>
                <pointsize>16</pointsize>
                <italic>false</italic>
-               <bold>false</bold>
+               <bold>true</bold>
                <kerning>true</kerning>
               </font>
              </property>
              <property name="styleSheet">
               <string notr="true">color: white;
-font-size: 16pt;
+font: 700 16pt &quot;Sansation&quot;;
 background-color: none;
 border: none;</string>
              </property>
@@ -574,53 +430,24 @@ border: none;</string>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_6">
            <item>
-            <widget class="QLabel" name="icon_other">
-             <property name="maximumSize">
-              <size>
-               <width>24</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Noto Sans SC</family>
-               <pointsize>14</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: white;
-font-weight: bold;
-font-size: 14pt;
-background-color: none;
-border: none;</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="pixmap">
-              <pixmap resource="res-rs.qrc">:/icons/icons/list_white_24dp.svg</pixmap>
-             </property>
-            </widget>
-           </item>
-           <item>
             <widget class="QLabel" name="lbl_other">
              <property name="font">
               <font>
-               <family>Noto Sans SC</family>
-               <pointsize>14</pointsize>
+               <family>Sansation</family>
+               <pointsize>21</pointsize>
+               <italic>false</italic>
                <bold>true</bold>
               </font>
              </property>
              <property name="styleSheet">
               <string notr="true">color: white;
 font-weight: bold;
-font-size: 14pt;
+font: 700 21pt &quot;Sansation&quot;;
 background-color: none;
 border: none;</string>
              </property>
              <property name="text">
-              <string>Other</string>
+              <string>🧩Other</string>
              </property>
             </widget>
            </item>
@@ -628,16 +455,16 @@ border: none;</string>
             <widget class="QLabel" name="total_other">
              <property name="font">
               <font>
-               <family>Noto Sans SC</family>
+               <family>Sansation</family>
                <pointsize>16</pointsize>
                <italic>false</italic>
-               <bold>false</bold>
+               <bold>true</bold>
                <kerning>true</kerning>
               </font>
              </property>
              <property name="styleSheet">
               <string notr="true">color: white;
-font-size: 16pt;
+font: 700 16pt &quot;Sansation&quot;;
 background-color: none;
 border: none;</string>
              </property>
@@ -663,7 +490,7 @@ border: none;</string>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <property name="spacing">
-        <number>-1</number>
+        <number>6</number>
        </property>
        <property name="leftMargin">
         <number>0</number>
@@ -687,9 +514,14 @@ border: none;</string>
          </property>
          <property name="font">
           <font>
-           <family>Noto Sans SC</family>
+           <family>Sansation</family>
+           <pointsize>20</pointsize>
+           <italic>false</italic>
            <bold>true</bold>
           </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{
@@ -699,6 +531,7 @@ border: none;</string>
      border-radius:7px;
 width: 230;
 height: 50;
+font: 700 20pt &quot;Sansation&quot;;
 }
 QPushButton:hover{
 background-color:rgba(255,255,255,30);
@@ -708,11 +541,7 @@ background-color:rgba(255,255,255,70);
 }</string>
          </property>
          <property name="text">
-          <string>New transaction</string>
-         </property>
-         <property name="icon">
-          <iconset resource="res-rs.qrc">
-           <normaloff>:/icons/icons/post_add_white_24dp.svg</normaloff>:/icons/icons/post_add_white_24dp.svg</iconset>
+          <string>➕New transaction</string>
          </property>
          <property name="iconSize">
           <size>
@@ -732,7 +561,9 @@ background-color:rgba(255,255,255,70);
          </property>
          <property name="font">
           <font>
-           <family>Noto Sans SC</family>
+           <family>Sansation</family>
+           <pointsize>20</pointsize>
+           <italic>false</italic>
            <bold>true</bold>
           </font>
          </property>
@@ -744,6 +575,7 @@ background-color:rgba(255,255,255,70);
      border-radius:7px;
 width: 230;
 height: 50;
+font: 700 20pt &quot;Sansation&quot;;
 }
 QPushButton:hover{
 background-color:rgba(255,255,255,30);
@@ -753,11 +585,7 @@ background-color:rgba(255,255,255,70);
 }</string>
          </property>
          <property name="text">
-          <string>Delete transaction</string>
-         </property>
-         <property name="icon">
-          <iconset resource="res-rs.qrc">
-           <normaloff>:/icons/icons/delete_white_24dp.svg</normaloff>:/icons/icons/delete_white_24dp.svg</iconset>
+          <string>🗑️Delete transaction</string>
          </property>
          <property name="iconSize">
           <size>
@@ -777,7 +605,9 @@ background-color:rgba(255,255,255,70);
          </property>
          <property name="font">
           <font>
-           <family>Noto Sans SC</family>
+           <family>Sansation</family>
+           <pointsize>20</pointsize>
+           <italic>false</italic>
            <bold>true</bold>
           </font>
          </property>
@@ -789,6 +619,7 @@ background-color:rgba(255,255,255,70);
      border-radius:7px;
 width: 230;
 height: 50;
+font: 700 20pt &quot;Sansation&quot;;
 }
 QPushButton:hover{
 background-color:rgba(255,255,255,30);
@@ -798,11 +629,7 @@ background-color:rgba(255,255,255,70);
 }</string>
          </property>
          <property name="text">
-          <string>Edit transaction</string>
-         </property>
-         <property name="icon">
-          <iconset resource="res-rs.qrc">
-           <normaloff>:/icons/icons/edit_white_24dp.svg</normaloff>:/icons/icons/edit_white_24dp.svg</iconset>
+          <string>✏️Edit transaction</string>
          </property>
          <property name="iconSize">
           <size>
@@ -823,6 +650,8 @@ background-color: rgba(255, 255, 255, 30);
 border: 1px solid rgba(255,255,255,40);
 border-bottom-right-radius: 7px; 
 border-bottom-left-radius: 7px; 
+border-top-right-radius: 7px; 
+border-top-left-radius: 7px; 
 color: white;
 }
 
@@ -849,13 +678,13 @@ QTableView::item:selected{
 </string>
       </property>
       <property name="verticalScrollBarPolicy">
-       <enum>Qt::ScrollBarAlwaysOff</enum>
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
       </property>
       <property name="horizontalScrollBarPolicy">
-       <enum>Qt::ScrollBarAlwaysOff</enum>
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
       </property>
       <property name="textElideMode">
-       <enum>Qt::ElideRight</enum>
+       <enum>Qt::TextElideMode::ElideRight</enum>
       </property>
       <property name="showGrid">
        <bool>false</bool>
@@ -874,8 +703,6 @@ QTableView::item:selected{
    </layout>
   </widget>
  </widget>
- <resources>
-  <include location="res-rs.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

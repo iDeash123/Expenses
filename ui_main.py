@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'ui_main.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.4.2
+## Created by: Qt User Interface Compiler version 6.9.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -18,19 +18,25 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QHeaderView,
     QLabel, QMainWindow, QPushButton, QSizePolicy,
     QTableView, QVBoxLayout, QWidget)
-import res
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(803, 673)
+        MainWindow.resize(1006, 675)
         MainWindow.setMinimumSize(QSize(800, 600))
         font = QFont()
         font.setFamilies([u"Noto Sans SC"])
         MainWindow.setFont(font)
         MainWindow.setStyleSheet(u"font-family: Noto Sans SC;\n"
-"background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(12, 20, 69, 255), stop:0.3 rgba(34, 13, 54, 255), stop:0.6 rgba(54, 0, 51, 255), stop:0.8 rgba(23, 11, 28, 255), stop:1 rgba(0, 0, 0, 255));\n"
+"background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0,\n"
+"    stop:0 rgba(10, 10, 40, 255),\n"
+"    stop:0.3 rgba(30, 0, 60, 255),\n"
+"    stop:0.6 rgba(0, 70, 100, 255),\n"
+"    stop:1 rgba(0, 150, 160, 255));\n"
+"\n"
+"\n"
+"\n"
 "")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
@@ -43,8 +49,8 @@ class Ui_MainWindow(object):
         self.balances_frame.setStyleSheet(u"background-color: rgba(255, 255, 255, 30); \n"
 "border: 1px solid rgba(255,255,255,40);\n"
 "border-radius: 7px;")
-        self.balances_frame.setFrameShape(QFrame.NoFrame)
-        self.balances_frame.setFrameShadow(QFrame.Raised)
+        self.balances_frame.setFrameShape(QFrame.Shape.NoFrame)
+        self.balances_frame.setFrameShadow(QFrame.Shadow.Raised)
         self.verticalLayout_21 = QVBoxLayout(self.balances_frame)
         self.verticalLayout_21.setSpacing(0)
         self.verticalLayout_21.setObjectName(u"verticalLayout_21")
@@ -52,29 +58,30 @@ class Ui_MainWindow(object):
         self.lbl_current_balance = QLabel(self.balances_frame)
         self.lbl_current_balance.setObjectName(u"lbl_current_balance")
         font1 = QFont()
-        font1.setFamilies([u"Noto Sans SC"])
-        font1.setPointSize(20)
+        font1.setFamilies([u"Sansation"])
+        font1.setPointSize(30)
         font1.setBold(True)
+        font1.setItalic(False)
         self.lbl_current_balance.setFont(font1)
         self.lbl_current_balance.setStyleSheet(u"color: white;\n"
 "font-weight: bold;\n"
-"font-size: 20pt;\n"
 "background-color: none;\n"
-"border: none;")
+"border: none;\n"
+"font: 700 30pt \"Sansation\";")
 
         self.verticalLayout_21.addWidget(self.lbl_current_balance)
 
         self.current_balance = QLabel(self.balances_frame)
         self.current_balance.setObjectName(u"current_balance")
         font2 = QFont()
-        font2.setFamilies([u"Noto Sans SC"])
+        font2.setFamilies([u"Sansation"])
         font2.setPointSize(30)
-        font2.setBold(False)
+        font2.setBold(True)
         font2.setItalic(False)
         font2.setKerning(True)
         self.current_balance.setFont(font2)
         self.current_balance.setStyleSheet(u"color: white;\n"
-"font-size: 30pt;\n"
+"font: 700 30pt \"Sansation\";\n"
 "background-color: none;\n"
 "border: none;")
         self.current_balance.setLineWidth(0)
@@ -83,33 +90,20 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_9 = QHBoxLayout()
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
-        self.lbl_arrow_top = QLabel(self.balances_frame)
-        self.lbl_arrow_top.setObjectName(u"lbl_arrow_top")
-        self.lbl_arrow_top.setMaximumSize(QSize(24, 16777215))
-        font3 = QFont()
-        font3.setFamilies([u"Noto Sans SC"])
-        font3.setPointSize(16)
-        font3.setBold(True)
-        self.lbl_arrow_top.setFont(font3)
-        self.lbl_arrow_top.setStyleSheet(u"color: white;\n"
-"font-weight: bold;\n"
-"font-size: 16pt;\n"
-"background-color: none;\n"
-"border: none;\n"
-"padding-top: 10px;")
-        self.lbl_arrow_top.setPixmap(QPixmap(u":/icons/icons/north_west_white_24dp.svg"))
-
-        self.horizontalLayout_9.addWidget(self.lbl_arrow_top)
-
         self.lbl_income = QLabel(self.balances_frame)
         self.lbl_income.setObjectName(u"lbl_income")
+        font3 = QFont()
+        font3.setFamilies([u"Sansation"])
+        font3.setPointSize(21)
+        font3.setBold(True)
+        font3.setItalic(False)
         self.lbl_income.setFont(font3)
         self.lbl_income.setStyleSheet(u"color: white;\n"
 "font-weight: bold;\n"
-"font-size: 16pt;\n"
 "background-color: none;\n"
 "border: none;\n"
-"padding-top: 10px;")
+"padding-top: 10px;\n"
+"font: 700 21pt \"Sansation\";")
 
         self.horizontalLayout_9.addWidget(self.lbl_income)
 
@@ -119,14 +113,14 @@ class Ui_MainWindow(object):
         self.income_balance = QLabel(self.balances_frame)
         self.income_balance.setObjectName(u"income_balance")
         font4 = QFont()
-        font4.setFamilies([u"Noto Sans SC"])
-        font4.setPointSize(20)
-        font4.setBold(False)
+        font4.setFamilies([u"Sansation"])
+        font4.setPointSize(22)
+        font4.setBold(True)
         font4.setItalic(False)
         font4.setKerning(True)
         self.income_balance.setFont(font4)
         self.income_balance.setStyleSheet(u"color: white;\n"
-"font-size: 20pt;\n"
+"font: 700 22pt \"Sansation\";\n"
 "background-color: none;\n"
 "border: none;")
         self.income_balance.setLineWidth(0)
@@ -135,26 +129,12 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_10 = QHBoxLayout()
         self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
-        self.lbl_arrow_bottom = QLabel(self.balances_frame)
-        self.lbl_arrow_bottom.setObjectName(u"lbl_arrow_bottom")
-        self.lbl_arrow_bottom.setMaximumSize(QSize(24, 16777215))
-        self.lbl_arrow_bottom.setFont(font3)
-        self.lbl_arrow_bottom.setStyleSheet(u"color: white;\n"
-"font-weight: bold;\n"
-"font-size: 16pt;\n"
-"background-color: none;\n"
-"border: none;\n"
-"padding-top: 10px;")
-        self.lbl_arrow_bottom.setPixmap(QPixmap(u":/icons/icons/call_received_white_24dp.svg"))
-
-        self.horizontalLayout_10.addWidget(self.lbl_arrow_bottom)
-
         self.lbl_outcome = QLabel(self.balances_frame)
         self.lbl_outcome.setObjectName(u"lbl_outcome")
         self.lbl_outcome.setFont(font3)
         self.lbl_outcome.setStyleSheet(u"color: white;\n"
 "font-weight: bold;\n"
-"font-size: 16pt;\n"
+"font: 700 21pt \"Sansation\";\n"
 "background-color: none;\n"
 "border: none;\n"
 "padding-top: 10px;")
@@ -166,9 +146,15 @@ class Ui_MainWindow(object):
 
         self.outcome_balance = QLabel(self.balances_frame)
         self.outcome_balance.setObjectName(u"outcome_balance")
-        self.outcome_balance.setFont(font4)
+        font5 = QFont()
+        font5.setFamilies([u"Sansation"])
+        font5.setPointSize(20)
+        font5.setBold(True)
+        font5.setItalic(False)
+        font5.setKerning(True)
+        self.outcome_balance.setFont(font5)
         self.outcome_balance.setStyleSheet(u"color: white;\n"
-"font-size: 20pt;\n"
+"font: 700 20pt \"Sansation\";\n"
 "background-color: none;\n"
 "border: none;")
         self.outcome_balance.setLineWidth(0)
@@ -183,8 +169,8 @@ class Ui_MainWindow(object):
         self.balances_frame_2.setStyleSheet(u"background-color: rgba(255, 255, 255, 30); \n"
 "border: 1px solid rgba(255,255,255,40);\n"
 "border-radius: 7px;")
-        self.balances_frame_2.setFrameShape(QFrame.NoFrame)
-        self.balances_frame_2.setFrameShadow(QFrame.Raised)
+        self.balances_frame_2.setFrameShape(QFrame.Shape.NoFrame)
+        self.balances_frame_2.setFrameShadow(QFrame.Shadow.Raised)
         self.verticalLayout_20 = QVBoxLayout(self.balances_frame_2)
         self.verticalLayout_20.setSpacing(0)
         self.verticalLayout_20.setObjectName(u"verticalLayout_20")
@@ -194,42 +180,20 @@ class Ui_MainWindow(object):
         self.lbl_expenses_categories.setFont(font1)
         self.lbl_expenses_categories.setStyleSheet(u"color: white;\n"
 "font-weight: bold;\n"
-"font-size: 20pt;\n"
 "background-color: none;\n"
-"border: none;")
+"border: none;\n"
+"font: 700 30pt \"Sansation\";")
 
         self.verticalLayout_20.addWidget(self.lbl_expenses_categories)
 
         self.horizontalLayout_3 = QHBoxLayout()
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.icon_groceries = QLabel(self.balances_frame_2)
-        self.icon_groceries.setObjectName(u"icon_groceries")
-        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.icon_groceries.sizePolicy().hasHeightForWidth())
-        self.icon_groceries.setSizePolicy(sizePolicy)
-        self.icon_groceries.setMaximumSize(QSize(24, 16777215))
-        font5 = QFont()
-        font5.setFamilies([u"Noto Sans SC"])
-        font5.setPointSize(14)
-        font5.setBold(True)
-        self.icon_groceries.setFont(font5)
-        self.icon_groceries.setStyleSheet(u"color: white;\n"
-"font-weight: bold;\n"
-"font-size: 14pt;\n"
-"background-color: none;\n"
-"border: none;")
-        self.icon_groceries.setPixmap(QPixmap(u":/icons/icons/local_grocery_store_white_24dp.svg"))
-
-        self.horizontalLayout_3.addWidget(self.icon_groceries)
-
         self.lbl_groceries = QLabel(self.balances_frame_2)
         self.lbl_groceries.setObjectName(u"lbl_groceries")
-        self.lbl_groceries.setFont(font5)
+        self.lbl_groceries.setFont(font3)
         self.lbl_groceries.setStyleSheet(u"color: white;\n"
 "font-weight: bold;\n"
-"font-size: 14pt;\n"
+"font: 700 21pt \"Sansation\";\n"
 "background-color: none;\n"
 "border: none;")
 
@@ -238,14 +202,14 @@ class Ui_MainWindow(object):
         self.total_groceries = QLabel(self.balances_frame_2)
         self.total_groceries.setObjectName(u"total_groceries")
         font6 = QFont()
-        font6.setFamilies([u"Noto Sans SC"])
+        font6.setFamilies([u"Sansation"])
         font6.setPointSize(16)
-        font6.setBold(False)
+        font6.setBold(True)
         font6.setItalic(False)
         font6.setKerning(True)
         self.total_groceries.setFont(font6)
         self.total_groceries.setStyleSheet(u"color: white;\n"
-"font-size: 16pt;\n"
+"font: 700 16pt \"Sansation\";\n"
 "background-color: none;\n"
 "border: none;")
         self.total_groceries.setLineWidth(0)
@@ -257,25 +221,12 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_4 = QHBoxLayout()
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.icon_entertainment = QLabel(self.balances_frame_2)
-        self.icon_entertainment.setObjectName(u"icon_entertainment")
-        self.icon_entertainment.setMaximumSize(QSize(24, 16777215))
-        self.icon_entertainment.setFont(font5)
-        self.icon_entertainment.setStyleSheet(u"color: white;\n"
-"font-weight: bold;\n"
-"font-size: 14pt;\n"
-"background-color: none;\n"
-"border: none;")
-        self.icon_entertainment.setPixmap(QPixmap(u":/icons/icons/sports_esports_white_24dp.svg"))
-
-        self.horizontalLayout_4.addWidget(self.icon_entertainment)
-
         self.lbl_entertainment = QLabel(self.balances_frame_2)
         self.lbl_entertainment.setObjectName(u"lbl_entertainment")
-        self.lbl_entertainment.setFont(font5)
+        self.lbl_entertainment.setFont(font3)
         self.lbl_entertainment.setStyleSheet(u"color: white;\n"
 "font-weight: bold;\n"
-"font-size: 14pt;\n"
+"font: 700 21pt \"Sansation\";\n"
 "background-color: none;\n"
 "border: none;")
 
@@ -285,7 +236,7 @@ class Ui_MainWindow(object):
         self.total_entertainment.setObjectName(u"total_entertainment")
         self.total_entertainment.setFont(font6)
         self.total_entertainment.setStyleSheet(u"color: white;\n"
-"font-size: 16pt;\n"
+"font: 700 16pt \"Sansation\";\n"
 "background-color: none;\n"
 "border: none;")
         self.total_entertainment.setLineWidth(0)
@@ -297,25 +248,12 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_5 = QHBoxLayout()
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
-        self.icon_auto = QLabel(self.balances_frame_2)
-        self.icon_auto.setObjectName(u"icon_auto")
-        self.icon_auto.setMaximumSize(QSize(24, 16777215))
-        self.icon_auto.setFont(font5)
-        self.icon_auto.setStyleSheet(u"color: white;\n"
-"font-weight: bold;\n"
-"font-size: 14pt;\n"
-"background-color: none;\n"
-"border: none;")
-        self.icon_auto.setPixmap(QPixmap(u":/icons/icons/directions_car_white_24dp.svg"))
-
-        self.horizontalLayout_5.addWidget(self.icon_auto)
-
         self.lbl_auto = QLabel(self.balances_frame_2)
         self.lbl_auto.setObjectName(u"lbl_auto")
-        self.lbl_auto.setFont(font5)
+        self.lbl_auto.setFont(font3)
         self.lbl_auto.setStyleSheet(u"color: white;\n"
 "font-weight: bold;\n"
-"font-size: 14pt;\n"
+"font: 700 21pt \"Sansation\";\n"
 "background-color: none;\n"
 "border: none;")
 
@@ -325,7 +263,7 @@ class Ui_MainWindow(object):
         self.total_auto.setObjectName(u"total_auto")
         self.total_auto.setFont(font6)
         self.total_auto.setStyleSheet(u"color: white;\n"
-"font-size: 16pt;\n"
+"font: 700 16pt \"Sansation\";\n"
 "background-color: none;\n"
 "border: none;")
         self.total_auto.setLineWidth(0)
@@ -337,25 +275,12 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_6 = QHBoxLayout()
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
-        self.icon_other = QLabel(self.balances_frame_2)
-        self.icon_other.setObjectName(u"icon_other")
-        self.icon_other.setMaximumSize(QSize(24, 16777215))
-        self.icon_other.setFont(font5)
-        self.icon_other.setStyleSheet(u"color: white;\n"
-"font-weight: bold;\n"
-"font-size: 14pt;\n"
-"background-color: none;\n"
-"border: none;")
-        self.icon_other.setPixmap(QPixmap(u":/icons/icons/list_white_24dp.svg"))
-
-        self.horizontalLayout_6.addWidget(self.icon_other)
-
         self.lbl_other = QLabel(self.balances_frame_2)
         self.lbl_other.setObjectName(u"lbl_other")
-        self.lbl_other.setFont(font5)
+        self.lbl_other.setFont(font3)
         self.lbl_other.setStyleSheet(u"color: white;\n"
 "font-weight: bold;\n"
-"font-size: 14pt;\n"
+"font: 700 21pt \"Sansation\";\n"
 "background-color: none;\n"
 "border: none;")
 
@@ -365,7 +290,7 @@ class Ui_MainWindow(object):
         self.total_other.setObjectName(u"total_other")
         self.total_other.setFont(font6)
         self.total_other.setStyleSheet(u"color: white;\n"
-"font-size: 16pt;\n"
+"font: 700 16pt \"Sansation\";\n"
 "background-color: none;\n"
 "border: none;")
         self.total_other.setLineWidth(0)
@@ -385,18 +310,19 @@ class Ui_MainWindow(object):
         self.btn_frame.setObjectName(u"btn_frame")
         self.btn_frame.setStyleSheet(u"background-color: transparent;")
         self.horizontalLayout = QHBoxLayout(self.btn_frame)
-#ifndef Q_OS_MAC
-        self.horizontalLayout.setSpacing(-1)
-#endif
+        self.horizontalLayout.setSpacing(6)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.btn_new_transaction = QPushButton(self.btn_frame)
         self.btn_new_transaction.setObjectName(u"btn_new_transaction")
         self.btn_new_transaction.setMinimumSize(QSize(230, 50))
         font7 = QFont()
-        font7.setFamilies([u"Noto Sans SC"])
+        font7.setFamilies([u"Sansation"])
+        font7.setPointSize(20)
         font7.setBold(True)
+        font7.setItalic(False)
         self.btn_new_transaction.setFont(font7)
+        self.btn_new_transaction.setCursor(QCursor(Qt.CursorShape.ArrowCursor))
         self.btn_new_transaction.setStyleSheet(u"QPushButton{\n"
 "	color: rgb(255, 255, 255);\n"
 "     background-color:rgba(255,255,255,30);\n"
@@ -404,6 +330,7 @@ class Ui_MainWindow(object):
 "     border-radius:7px;\n"
 "width: 230;\n"
 "height: 50;\n"
+"font: 700 20pt \"Sansation\";\n"
 "}\n"
 "QPushButton:hover{\n"
 "background-color:rgba(255,255,255,30);\n"
@@ -411,9 +338,6 @@ class Ui_MainWindow(object):
 "QPushButton:pressed{\n"
 "background-color:rgba(255,255,255,70);\n"
 "}")
-        icon = QIcon()
-        icon.addFile(u":/icons/icons/post_add_white_24dp.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_new_transaction.setIcon(icon)
         self.btn_new_transaction.setIconSize(QSize(24, 24))
 
         self.horizontalLayout.addWidget(self.btn_new_transaction)
@@ -429,6 +353,7 @@ class Ui_MainWindow(object):
 "     border-radius:7px;\n"
 "width: 230;\n"
 "height: 50;\n"
+"font: 700 20pt \"Sansation\";\n"
 "}\n"
 "QPushButton:hover{\n"
 "background-color:rgba(255,255,255,30);\n"
@@ -436,9 +361,6 @@ class Ui_MainWindow(object):
 "QPushButton:pressed{\n"
 "background-color:rgba(255,255,255,70);\n"
 "}")
-        icon1 = QIcon()
-        icon1.addFile(u":/icons/icons/delete_white_24dp.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_delete_transaction.setIcon(icon1)
         self.btn_delete_transaction.setIconSize(QSize(24, 24))
 
         self.horizontalLayout.addWidget(self.btn_delete_transaction)
@@ -454,6 +376,7 @@ class Ui_MainWindow(object):
 "     border-radius:7px;\n"
 "width: 230;\n"
 "height: 50;\n"
+"font: 700 20pt \"Sansation\";\n"
 "}\n"
 "QPushButton:hover{\n"
 "background-color:rgba(255,255,255,30);\n"
@@ -461,9 +384,6 @@ class Ui_MainWindow(object):
 "QPushButton:pressed{\n"
 "background-color:rgba(255,255,255,70);\n"
 "}")
-        icon2 = QIcon()
-        icon2.addFile(u":/icons/icons/edit_white_24dp.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_edit_transaction.setIcon(icon2)
         self.btn_edit_transaction.setIconSize(QSize(24, 24))
 
         self.horizontalLayout.addWidget(self.btn_edit_transaction)
@@ -478,6 +398,8 @@ class Ui_MainWindow(object):
 "border: 1px solid rgba(255,255,255,40);\n"
 "border-bottom-right-radius: 7px; \n"
 "border-bottom-left-radius: 7px; \n"
+"border-top-right-radius: 7px; \n"
+"border-top-left-radius: 7px; \n"
 "color: white;\n"
 "}\n"
 "\n"
@@ -492,6 +414,8 @@ class Ui_MainWindow(object):
 "QTableView::item {\n"
 "    border-style: none;\n"
 "    border-bottom: 1px solid rgba(255,255,255,50);\n"
+"    padding-left: auto;\n"
+"    padding-right: auto;\n"
 "}\n"
 "\n"
 "QTableView::item:selected{\n"
@@ -500,12 +424,12 @@ class Ui_MainWindow(object):
 "    background-color: rgba(255, 255, 255, 50);\n"
 "}\n"
 "")
-        self.tableView.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.tableView.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.tableView.setTextElideMode(Qt.ElideRight)
+        self.tableView.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.tableView.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.tableView.setTextElideMode(Qt.TextElideMode.ElideRight)
         self.tableView.setShowGrid(False)
         self.tableView.setSortingEnabled(True)
-        self.tableView.horizontalHeader().setDefaultSectionSize(135)
+        self.tableView.horizontalHeader().setDefaultSectionSize(155)
         self.tableView.verticalHeader().setVisible(False)
 
         self.verticalLayout_2.addWidget(self.tableView)
@@ -519,29 +443,23 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.lbl_current_balance.setText(QCoreApplication.translate("MainWindow", u"Current Balance", None))
+        self.lbl_current_balance.setText(QCoreApplication.translate("MainWindow", u"\ud83d\udcb5Current Balance", None))
         self.current_balance.setText(QCoreApplication.translate("MainWindow", u"$3235,50", None))
-        self.lbl_arrow_top.setText("")
-        self.lbl_income.setText(QCoreApplication.translate("MainWindow", u"Income", None))
+        self.lbl_income.setText(QCoreApplication.translate("MainWindow", u"\u2b07\ufe0fIncome", None))
         self.income_balance.setText(QCoreApplication.translate("MainWindow", u"$3235,50", None))
-        self.lbl_arrow_bottom.setText("")
-        self.lbl_outcome.setText(QCoreApplication.translate("MainWindow", u"Outcome", None))
+        self.lbl_outcome.setText(QCoreApplication.translate("MainWindow", u"\u2b06\ufe0fOutcome", None))
         self.outcome_balance.setText(QCoreApplication.translate("MainWindow", u"$3235,50", None))
-        self.lbl_expenses_categories.setText(QCoreApplication.translate("MainWindow", u"Expenses categories", None))
-        self.icon_groceries.setText("")
-        self.lbl_groceries.setText(QCoreApplication.translate("MainWindow", u"Groceries", None))
+        self.lbl_expenses_categories.setText(QCoreApplication.translate("MainWindow", u"\ud83d\uddc2Expenses categories", None))
+        self.lbl_groceries.setText(QCoreApplication.translate("MainWindow", u"\ud83d\uded2Groceries", None))
         self.total_groceries.setText(QCoreApplication.translate("MainWindow", u"$3235,50", None))
-        self.icon_entertainment.setText("")
-        self.lbl_entertainment.setText(QCoreApplication.translate("MainWindow", u"Entertainment", None))
+        self.lbl_entertainment.setText(QCoreApplication.translate("MainWindow", u"\ud83c\udfaeEntertainment", None))
         self.total_entertainment.setText(QCoreApplication.translate("MainWindow", u"$3235,50", None))
-        self.icon_auto.setText("")
-        self.lbl_auto.setText(QCoreApplication.translate("MainWindow", u"Auto", None))
+        self.lbl_auto.setText(QCoreApplication.translate("MainWindow", u"\ud83d\ude97Auto", None))
         self.total_auto.setText(QCoreApplication.translate("MainWindow", u"$3235,50", None))
-        self.icon_other.setText("")
-        self.lbl_other.setText(QCoreApplication.translate("MainWindow", u"Other", None))
+        self.lbl_other.setText(QCoreApplication.translate("MainWindow", u"\ud83e\udde9Other", None))
         self.total_other.setText(QCoreApplication.translate("MainWindow", u"$3235,50", None))
-        self.btn_new_transaction.setText(QCoreApplication.translate("MainWindow", u"New transaction", None))
-        self.btn_delete_transaction.setText(QCoreApplication.translate("MainWindow", u"Delete transaction", None))
-        self.btn_edit_transaction.setText(QCoreApplication.translate("MainWindow", u"Edit transaction", None))
+        self.btn_new_transaction.setText(QCoreApplication.translate("MainWindow", u"\u2795New transaction", None))
+        self.btn_delete_transaction.setText(QCoreApplication.translate("MainWindow", u"\ud83d\uddd1\ufe0fDelete transaction", None))
+        self.btn_edit_transaction.setText(QCoreApplication.translate("MainWindow", u"\u270f\ufe0fEdit transaction", None))
     # retranslateUi
 
